@@ -28,7 +28,7 @@ def build_preview(root, output):
     html = html.replace('src="/', 'src="./').replace('href="/', 'href="./').replace('srcset="/', 'srcset="./')
     html = html.replace('href="./api/', 'href="/api/')
     html = html.replace('<head>', '<head>\n  <script src="./demo/adapter.js"></script><link rel="stylesheet" href="./demo/preview.css">', 1)
-    html = html.replace('<main>', '<main><section class="demo-notice" role="note"><strong>在线交互预览</strong><span>界面自动同步 main；设备、画面与统计均为演示数据，不能连接手机或执行任务。选择与设置仅在当前页面有效。</span><a href="https://github.com/h0ll0w-AkuZr0guY/MiaoTask/releases/latest">下载桌面版 ↗</a><a href="./activities/">活动资源</a></section>', 1)
+    html = html.replace('<main>', '<main><section class="demo-notice" role="note"><strong>在线交互预览</strong><span>界面自动同步 main；设备、画面与统计均为演示数据，不能连接手机或执行任务。选择与设置仅在当前页面有效。</span><a href="https://github.com/heyunl/MiaoTask-macOS/releases/latest">下载桌面版 ↗</a><a href="./activities/">活动资源</a></section>', 1)
     html = html.replace(' 本地运行</div>', ' 在线演示</div>')
     html = html.replace('仅本机访问 · 截图识别在本地完成', '在线交互预览 · 数据均为演示')
     (output / 'index.html').write_text(html, encoding='utf-8')
